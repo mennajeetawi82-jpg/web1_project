@@ -1,0 +1,491 @@
+/* ===== General ===== */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+/* ===== Header ===== */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 40px;
+    border-bottom: 1px solid #eee;
+}
+.header nav {
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    width: 35px;
+}
+
+
+.header nav a {
+    margin-left: 20px;
+    font-size: 14px;
+}
+
+/* ===== Hero ===== */
+.hero {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 60px 40px;
+
+    background-image: url("bg.png");   
+    background-size: cover;            
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.hero-text {
+    width: 50%;
+}
+
+.hero-text h1 span {
+    color: #1bb3a9;
+}
+
+.hero-text button {
+    background-color: #1bb3a9;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+.hero-image {
+    width: 45%;
+}
+
+.hero-image img {
+    width: 100%;
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 768px) {
+    .hero {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .hero-text,
+    .hero-image {
+        width: 100%;
+    }
+
+    .header {
+        flex-direction: column;
+        gap: 10px;
+    }
+}
+/* ===== Services ===== */
+.services {
+    display: flex;
+    justify-content: space-between;
+    padding: 40px;
+    text-align: center;
+}
+
+.service-box {
+    width: 22%;
+}
+
+.service-box img {
+    width: 50px;
+    margin-bottom: 10px;
+}
+
+/* ===== Responsive Services ===== */
+@media (max-width: 768px) {
+    .services {
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    .service-box {
+        width: 100%;
+    }
+}
+/* ===== Featured Books ===== */
+.featured {
+    padding: 60px 40px;
+    text-align: center;
+}
+
+.featured h2 {
+    margin-bottom: 40px;
+}
+
+.featured-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.book-card {
+    width: 23%;
+    border: 1px solid #ddd;
+    padding: 15px;
+}
+
+.book-card img {
+    width: 100%;
+}
+
+.book-card .price {
+    color: #1bb3a9;
+    font-weight: bold;
+}
+
+.book-card button {
+    background-color: #1bb3a9;
+    color: white;
+    border: none;
+    padding: 8px 15px;
+    cursor: pointer;
+}
+
+/* ===== Responsive Featured ===== */
+@media (max-width: 768px) {
+    .featured-container {
+        flex-direction: column;
+    }
+
+    .book-card {
+        width: 100%;
+    }
+}
+
+/* ===== New Arrivals ===== */
+.arrivals {
+    padding: 60px 40px;
+    text-align: center;
+}
+
+.arrivals h2 {
+    margin-bottom: 40px;
+}
+
+.arrivals-container {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 20px;
+}
+
+.arrival-card {
+    border: 1px solid #ddd;
+    padding: 15px;
+}
+
+.arrival-card img {
+    width: 100%;
+}
+
+.arrival-card h3 {
+    font-size: 14px;
+    margin: 10px 0;
+}
+
+.stars {
+    color: #1bb3a9;
+    margin-bottom: 10px;
+}
+
+.arrival-card button {
+    background-color: #1bb3a9;
+    color: white;
+    border: none;
+    padding: 6px 12px;
+    cursor: pointer;
+    font-size: 13px;
+}
+
+/* ===== Responsive New Arrivals ===== */
+@media (max-width: 768px) {
+    .arrivals-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* ===== Reviews ===== */
+.reviews {
+    padding: 60px 40px;
+    text-align: center;
+}
+
+.reviews h2 {
+    margin-bottom: 40px;
+}
+
+.reviews-container {
+    display: flex;
+    gap: 20px;
+    justify-content: space-between;
+}
+
+.review-card {
+    width: 23%;
+    border: 1px solid #ddd;
+    padding: 20px;
+}
+
+.review-card img {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    margin-bottom: 10px;
+}
+
+.review-card p {
+    font-size: 13px;
+}
+
+.review-card .stars {
+    color: #1bb3a9;
+    margin-top: 10px;
+}
+
+/* Responsive Reviews */
+@media (max-width: 768px) {
+    .reviews-container {
+        flex-direction: column;
+    }
+
+    .review-card {
+        width: 100%;
+    }
+}
+
+/* ===== Digital Book (Image Only) ===== */
+.digital {
+    position: relative;
+    margin: 60px 0;
+}
+
+.digital img {
+    width: 100%;
+    display: block;
+}
+
+.digital-btn {
+    position: absolute;
+    left: 40px;
+    bottom: 40px;
+    background: #1bb3a9;
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+/* Responsive Digital */
+@media (max-width: 768px) {
+    .digital-btn {
+        left: 50%;
+        transform: translateX(-50%);
+        bottom: 20px;
+    }
+}
+
+/* ===== Our Blog ===== */
+.blog {
+    padding: 60px 40px;
+    text-align: center;
+}
+
+.blog h2 {
+    margin-bottom: 40px;
+}
+
+.blog-container {
+    display: flex;
+    gap: 20px;
+    justify-content: space-between;
+}
+
+.blog-card {
+    width: 32%;
+    border: 1px solid #ddd;
+    overflow: hidden;
+}
+
+.blog-card img {
+    width: 100%;
+    height: 200px;   
+    object-fit: cover;
+    display: block;
+}
+
+
+.blog-content {
+    padding: 15px;
+}
+
+.blog-content h3 {
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+.blog-content p {
+    font-size: 13px;
+    margin-bottom: 10px;
+}
+
+.blog-content a {
+    color: #1bb3a9;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+/* ===== Responsive Blog ===== */
+@media (max-width: 768px) {
+    .blog-container {
+        flex-direction: column;
+    }
+
+    .blog-card {
+        width: 100%;
+    }
+}
+
+/* ===== Footer ===== */
+.footer {
+    background: #efefef;
+    padding: 40px 40px 20px;
+    margin-top: 60px;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+}
+
+.footer-box {
+    width: 20%;
+    font-size: 14px;
+}
+
+.footer-box h3 {
+    margin-bottom: 15px;
+}
+
+.footer-logo img {
+    width: 30px;     
+    height: auto;
+    margin-bottom: 10px;
+    display: block;
+}
+
+
+
+.footer-box a {
+    display: block;
+    margin-bottom: 8px;
+    color: #000;
+}
+
+.footer-box p {
+    margin-bottom: 8px;
+}
+
+.footer-box input {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    margin-bottom: 10px;
+}
+
+.footer-box button {
+    width: 100%;
+    background: #1bb3a9;
+    color: white;
+    border: none;
+    padding: 8px;
+    cursor: pointer;
+}
+
+/* Bottom text */
+.footer-bottom {
+    text-align: center;
+    margin-top: 30px;
+    font-size: 13px;
+}
+
+.footer-bottom span {
+    color: #1bb3a9;
+    font-weight: bold;
+}
+
+/* Responsive Footer */
+@media (max-width: 768px) {
+    .footer-container {
+        flex-direction: column;
+    }
+
+    .footer-box {
+        width: 100%;
+    }
+}
+
+/* ===== Follow Us ===== */
+.follow-us .social-icons {
+    display: flex;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.follow-us .social-icons img {
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+}
+
+/* ===== Fix Footer Logo ===== */
+.footer-logo {
+    display: flex;
+    flex-direction: column;   
+    align-items: flex-start;
+}
+
+.footer-logo-img {
+    width: 25px !important;   
+    max-width: 25px;
+    height: auto;
+    display: block;          
+    margin-bottom: 10px;
+}
+
+
+/* ===== Dark Mode CSS Only ===== */
+#dark-toggle:checked + .page {
+    background: #121212;
+    color: #f1f1f1;
+}
+
+#dark-toggle:checked + .page a {
+    color: #f1f1f1;
+}
+
+#dark-toggle:checked + .page .header,
+#dark-toggle:checked + .page .footer {
+    background: #1c1c1c;
+}
+
+#dark-toggle:checked + .page .book-card,
+#dark-toggle:checked + .page .arrival-card,
+#dark-toggle:checked + .page .review-card,
+#dark-toggle:checked + .page .blog-card,
+#dark-toggle:checked + .page .service-box {
+    background: #1e1e1e;
+    border-color: #333;
+}
